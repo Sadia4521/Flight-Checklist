@@ -1,0 +1,89 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page Layout - CSS Grid */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+}
+.page-layout {
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-rows:
+        auto
+        1fr
+        auto;
+}
+
+/* Header */
+.hero {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+.hero p {
+    margin-top: 10px;
+}
+
+/* Main */
+main {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Cards */
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.card h2 {
+    margin-bottom: 15px;
+}
+
+/* Flexbox */
+.checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.item {
+    background-color: #eef3f8;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Image */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
